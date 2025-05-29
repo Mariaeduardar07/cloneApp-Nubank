@@ -13,7 +13,7 @@ function ActionButton({ icon, label, onPress }) {
   return (
     <TouchableOpacity style={styles.actionButton} activeOpacity={0.7} onPress={onPress}>
       <View style={styles.iconCircle}>
-        <Ionicons name={icon} size={24} color="#820ad1" />
+        <Ionicons name={icon} size={24} color="#ffff" />
       </View>
       <Text style={styles.label} numberOfLines={1}>{label}</Text>
     </TouchableOpacity>
