@@ -5,6 +5,7 @@ import HeaderCard from "../components/header/Header.js";
 import AccountBalance from "../components/accountbalance/Accountbalance.js";
 import InfoCard from "../components/infocard/infocard.js";
 import ActionButton from "../components/actionbutton/Actionbutton.js";
+import Carrosel from "../components/carrosel/Carrosel.js";
 
 
 export default function Home() {
@@ -12,10 +13,13 @@ export default function Home() {
     <View style={styles.container}>
       <HeaderCard />
       <AccountBalance />
+      <Carrosel />
+
       <ActionButton />
       <InfoCard icon="lock-outline" label="Caixinhas" value="R$ 100,00" />
       <InfoCard icon="chart-bar" label="Meus Cartões" />
         <Card/>
+ main
     </View>
   );
 }
