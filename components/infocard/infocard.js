@@ -15,7 +15,7 @@ const InfoCard = ({ icon, label, value }) => {
 };
 
 const styles = StyleSheet.create({
-  card: {
+    card: {
     backgroundColor: '#f5f5f5',
     width: '80%',
     padding: 12,
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 20,
+    alignSelf: 'center', // Adicione esta linha
   },
   left: {
     flexDirection: 'row',
