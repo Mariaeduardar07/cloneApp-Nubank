@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet } from 'react-native'
 import AccountBalance from '../components/accountbalance/Accountbalance.js';
 import ActionButton from '../components/actionButton/ActionButton.js';
+import Card from '../components/card/Card.js'
+import giftCardImg from '../assets/gift-card.png';
 
 export default function Home() {
   return (
@@ -9,8 +11,7 @@ export default function Home() {
         <AccountBalance />
       <Text style={styles.title}>Olá, Usuário</Text>
       <Text style={styles.subtitle}>Bem-vindo ao seu app Nubank clone</Text>
-
-       
+      <Card/>
     </View>
   )
 }
