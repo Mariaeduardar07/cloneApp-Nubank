@@ -1,19 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
+
 export default function Card({ title, children, image }) {
   return (
-    <View style={styles.wrapper}>
+      <View style={styles.wrapper}>
+        <Text style={styles.title}>Compre sem sair do app</Text>
       <View style={styles.card}>
-        {image && (
-          <Image
-            source={image}
+        <Image
+            source={require('../../assets/gift-card.png')} // Ensure the path is correct
             style={styles.image}
             resizeMode="contain"
           />
-        )}
         <View style={styles.textWrapper}>
-          <Text style={styles.title}>Compre sem sair do app</Text>
         </View>
       </View>
     </View>

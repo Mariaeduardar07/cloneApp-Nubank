@@ -1,10 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native'
 import Card from '../components/card/Card.js'
-import giftCardImg from '../assets/gift-card.png';
 import HeaderCard from "../components/header/Header.js";
-import AccountBalance from "../components/accountbalance/Accountbalance.js";
+import AccountBalance from "../components/accountBalance/Accountbalance.js";
 import InfoCard from "../components/infocard/infocard.js";
-import ActionButton from "../components/actionbutton/Actionbutton.js";
+import ActionButton from "../components/actionButton/Actionbutton.js";
 import Carrosel from "../components/carrosel/Carrosel.js";
 
 
