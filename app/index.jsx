@@ -1,15 +1,24 @@
 import { View, Text, StyleSheet } from "react-native";
 import AccountBalance from "../components/accountbalance/Accountbalance.js";
+
 import InfoCard from "../components/infocard/infocard.js";
+
+import ActionButton from "../components/actionbutton/Actionbutton.js";
+
 
 export default function Home() {
   return (
     <View style={styles.container}>
+
       <AccountBalance />
       <InfoCard icon="lock-outline" label="Caixinhas" value="R$ 100,00" />
       <InfoCard icon="chart-bar" label="Meus Cartões" />
       <Text style={styles.title}>Olá, Usuário</Text>
       <Text style={styles.subtitle}>Bem-vindo ao seu app Nubank clone</Text>
+
+      <ActionButton />
+      <AccountBalance />
+
     </View>
   );
 }
@@ -17,7 +26,12 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+
     backgroundColor: "#820ad1", // Roxo Nubank
+
+    // backgroundColor: '#820ad1',
+    backgroundColor: "#1c1e21",
+
     alignItems: "center",
     justifyContent: "center",
   },
