@@ -3,6 +3,7 @@
     "name": "cloneApp",
     "slug": "cloneApp",
     "version": "1.0.0",
+    "scheme": "meuapp",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
