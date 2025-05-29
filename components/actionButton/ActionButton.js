@@ -1,5 +1,6 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
+import { useRouter } from 'expo-router'
 
 const actions = [
   { id: 'pix', label: 'Área Pix', icon: 'qr-code' },
@@ -21,6 +22,8 @@ function ActionButton({ icon, label, onPress }) {
 }
 
 export default function QuickActions() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
       {actions.map(({ id, label, icon }) => (
@@ -28,7 +31,13 @@ export default function QuickActions() {
           key={id}
           icon={icon}
           label={label}
-          onPress={() => alert(label)}
+          onPress={() => {
+            if (id === 'pay') {
+              router.push('/repayment')
+            } else {
+              alert(label)
+            }
+          }}
         />
       ))}
     </View>
