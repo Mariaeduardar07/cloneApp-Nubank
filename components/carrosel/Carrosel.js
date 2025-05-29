@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native'
 import { useRef, useState } from 'react'
+import { useRouter } from 'expo-router';
 
 const CARD_WIDTH = 180
 const CARD_MARGIN = 16
@@ -8,6 +9,7 @@ const SCROLL_STEP = CARD_WIDTH + CARD_MARGIN
 export default function Carrosel() {
   const scrollRef = useRef(null)
   const [scrollX, setScrollX] = useState(0)
+  const router = useRouter();
 
   // Função para rolar para a direita
   const scrollRight = () => {
@@ -38,7 +40,10 @@ export default function Carrosel() {
             />
             <Text style={styles.cardTitle}>Indique o Nu para amigos</Text>
             <Text style={styles.cardSubtitle}>Espalhe como é simples estar no controle.</Text>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => router.push('/share')}
+            >
               <Text style={styles.buttonText}>Indicar amigos</Text>
             </TouchableOpacity>
           </View>
@@ -83,13 +88,14 @@ const styles = StyleSheet.create({
     marginTop: 24,
     marginBottom: 16,
   },
-  title: {
+ title: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
     marginLeft: 16,
     marginBottom: 8,
-    padding: 12,
+    padding: 20,
+    marginTop: 18, 
   },
   carouselRow: {
     flexDirection: 'row',

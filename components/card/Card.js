@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     marginVertical: 16,
     height: 170, 
   },
-  card: {
+ card: {
     backgroundColor: '#fff',
     borderRadius: 12,
     padding: 20,
@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    marginTop: 28,
   },
   image: {
     width: "150%",
