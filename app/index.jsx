@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native'
-import AccountBalance from '../components/AccountBalance/AccountBalance'
+import AccountBalance from '../components/accountbalance/Accountbalance.js';
 
 export default function Home() {
   return (
