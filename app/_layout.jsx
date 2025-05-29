@@ -5,7 +5,9 @@ export default function RootLayout() {
         <Stack>
             <Stack.Screen name="index" options={{ headerShown: false }} />
             <Stack.Screen name="repayment" options={{ headerShown: false }} />
-            <Stack.Screen name="about" options={{ title: 'Sobre' }} />
+            <Stack.Screen name="about" options={{ title: 'SSobre' }} />
+            <Stack.Screen name="share" options={{ headerShown: false }} />
+
             <Stack.Screen name="(aux)/termos" options={{ title: 'Termos de uso' }} />
         </Stack>
     )
