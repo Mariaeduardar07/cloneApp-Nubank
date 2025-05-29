@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 import AccountBalance from "../components/accountbalance/Accountbalance.js";
-import ActionButton from "../components/actionButton/ActionButton.js";
+import ActionButton from "../components/actionbutton/Actionbutton.js";
 
 export default function Home() {
   return (
