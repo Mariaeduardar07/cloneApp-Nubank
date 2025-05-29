@@ -1,10 +1,14 @@
 import { View, Text, StyleSheet } from 'react-native'
+import AccountBalance from '../components/AccountBalance/AccountBalance'
 
 export default function Home() {
   return (
     <View style={styles.container}>
+        <AccountBalance />
       <Text style={styles.title}>Olá, Usuário</Text>
       <Text style={styles.subtitle}>Bem-vindo ao seu app Nubank clone</Text>
+
+       
     </View>
   )
 }
@@ -27,3 +31,5 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
 })
+
+ 
