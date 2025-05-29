@@ -1,12 +1,14 @@
 import { View, Text, StyleSheet } from "react-native";
 import AccountBalance from "../components/accountbalance/Accountbalance.js";
 import ActionButton from "../components/actionbutton/Actionbutton.js";
+import Carrosel from "../components/carrosel/Carrosel.js";
 
 export default function Home() {
   return (
     <View style={styles.container}>
       <ActionButton />
       <AccountBalance />
+      <Carrosel />
     </View>
   );
 }
