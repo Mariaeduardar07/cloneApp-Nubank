@@ -1,8 +1,11 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from 'react-native'
+import Card from '../components/card/Card.js'
+import giftCardImg from '../assets/gift-card.png';
 import HeaderCard from "../components/header/Header.js";
 import AccountBalance from "../components/accountbalance/Accountbalance.js";
 import InfoCard from "../components/infocard/infocard.js";
 import ActionButton from "../components/actionbutton/Actionbutton.js";
+
 
 export default function Home() {
   return (
@@ -12,6 +15,7 @@ export default function Home() {
       <ActionButton />
       <InfoCard icon="lock-outline" label="Caixinhas" value="R$ 100,00" />
       <InfoCard icon="chart-bar" label="Meus Cartões" />
+        <Card/>
     </View>
   );
 }
