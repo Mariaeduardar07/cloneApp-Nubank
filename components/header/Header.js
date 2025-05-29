@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { FontAwesome } from '@expo/vector-icons';
 
-const HeaderCard = () => {
+const HeaderCard = ({ showBalance, setShowBalance }) => {
   return (
     <View style={styles.container}>
       {/* Parte esquerda - ícone e texto */}
@@ -16,8 +16,8 @@ const HeaderCard = () => {
 
       {/* Parte direita - ícones */}
       <View style={styles.rightSection}>
-        <TouchableOpacity style={styles.icon}>
-          <Icon name="visibility" size={22} color="#fff" />
+        <TouchableOpacity style={styles.icon} onPress={() => setShowBalance(!showBalance)}>
+          <Icon name={showBalance ? "visibility" : "visibility-off"} size={22} color="#fff" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.icon}>
           <Icon name="help-outline" size={22} color="#fff" />
@@ -43,11 +43,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
- leftSection: {
+  leftSection: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    marginLeft: 20, // Adicione esta linha para espaçamento à esquerda
-    flex: 1, // Adicione esta linha
+    marginLeft: 20,
+    flex: 1,
   },
   profileCircle: {
     backgroundColor: '#BA4DE3',
@@ -57,19 +57,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-   greeting: {
+  greeting: {
     color: '#fff',
     fontSize: 14,
     fontWeight: 'bold',
-   marginTop: 30, // ajuste o valor conforme desejar
+    marginTop: 30,
   },
   rightSection: {
-   flexDirection: 'row',
+    flexDirection: 'row',
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
     gap: 25,
-    marginRight: 5, // Adicione esta linha para espaçamento à direita
-    marginBottom: 50, // Adicione esta linha para espaçamento inferior
+    marginRight: 5,
+    marginBottom: 50,
   },
   icon: {
     position: 'relative',
