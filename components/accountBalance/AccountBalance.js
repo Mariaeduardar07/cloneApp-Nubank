@@ -1,11 +1,7 @@
-import { useState } from 'react'
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
-import { Ionicons } from '@expo/vector-icons' 
+import { View, Text, StyleSheet } from 'react-native'
 
-export default function AccountBalance() {
-  const [showBalance, setShowBalance] = useState(true)
-
-  const balance = 55473.28 
+export default function AccountBalance({ showBalance }) {
+  const balance = 55473.28
 
   function formatCurrency(value) {
     return value.toLocaleString('pt-BR', {
@@ -17,19 +13,10 @@ export default function AccountBalance() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Saldo disponível</Text>
-
       <View style={styles.row}>
         <Text style={styles.amount}>
           {showBalance ? formatCurrency(balance) : '••••••'}
         </Text>
-
-        <TouchableOpacity onPress={() => setShowBalance(!showBalance)}>
-          <Ionicons
-            name={showBalance ? 'eye' : 'eye-off'}
-            size={22}
-            color="#fff"
-          />
-        </TouchableOpacity>
       </View>
     </View>
   )
@@ -37,7 +24,8 @@ export default function AccountBalance() {
 
 const styles = StyleSheet.create({
   container: {
-  marginTop: 30,
+    marginTop: 30,
+    paddingLeft: 24,
   },
   title: {
     color: '#fff',
