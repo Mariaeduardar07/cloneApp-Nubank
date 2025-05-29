@@ -44,20 +44,20 @@ const styles = StyleSheet.create({
   },
   actionButton: {
     alignItems: 'center',
-    width: 60,
+    width: 63,
   },
   iconCircle: {
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#f0e6fd',
+    backgroundColor: '#3a3c40',
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 6,
   },
   label: {
     fontSize: 12,
-    color: '#333',
+    color: '#ffff',
     textAlign: 'center',
   },
 })

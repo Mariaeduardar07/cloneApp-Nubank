@@ -1,38 +1,45 @@
 import { View, Text, StyleSheet } from 'react-native'
-import AccountBalance from '../components/accountbalance/Accountbalance.js';
-import ActionButton from '../components/actionButton/ActionButton.js';
 import Card from '../components/card/Card.js'
 import giftCardImg from '../assets/gift-card.png';
+import HeaderCard from "../components/header/Header.js";
+import AccountBalance from "../components/accountbalance/Accountbalance.js";
+import InfoCard from "../components/infocard/infocard.js";
+import ActionButton from "../components/actionbutton/Actionbutton.js";
+
 
 export default function Home() {
   return (
     <View style={styles.container}>
+      <HeaderCard />
+      <AccountBalance />
       <ActionButton />
-        <AccountBalance />
-      <Text style={styles.title}>Olá, Usuário</Text>
-      <Text style={styles.subtitle}>Bem-vindo ao seu app Nubank clone</Text>
-      <Card/>
+      <InfoCard icon="lock-outline" label="Caixinhas" value="R$ 100,00" />
+      <InfoCard icon="chart-bar" label="Meus Cartões" />
+        <Card/>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#820ad1', // Roxo Nubank
-    alignItems: 'center',
-    justifyContent: 'center',
+
+    backgroundColor: "#820ad1", // Roxo Nubank
+
+    // backgroundColor: '#820ad1',
+    backgroundColor: "#1c1e21",
+
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#fff',
+    fontWeight: "bold",
+    color: "#fff",
   },
   subtitle: {
     fontSize: 16,
-    color: '#fff',
+    color: "#fff",
     marginTop: 8,
   },
-})
-
- 
+});

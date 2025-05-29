@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons'
 export default function AccountBalance() {
   const [showBalance, setShowBalance] = useState(true)
 
-  const balance = 5473.28 
+  const balance = 55473.28 
 
   function formatCurrency(value) {
     return value.toLocaleString('pt-BR', {
@@ -37,11 +37,7 @@ export default function AccountBalance() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#820ad1',
-    padding: 20,
-    borderRadius: 12,
-    margin: 16,
-    elevation: 4,
+  marginTop: 30,
   },
   title: {
     color: '#fff',
